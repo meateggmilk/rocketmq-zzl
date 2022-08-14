@@ -56,7 +56,7 @@ public class GetAccessConfigSubCommand implements SubCommand {
     public Options buildCommandlineOptions(Options options) {
         OptionGroup optionGroup = new OptionGroup();
 
-        Option opt = new Option("b", "brokerAddr", true, "query acl config version for which broker");
+        Option opt = new Option("b", "brokerAddr", true, "query acl config version for specified broker");
         optionGroup.addOption(opt);
 
         opt = new Option("c", "clusterName", true, "query acl config version for specified cluster");

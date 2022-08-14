@@ -17,20 +17,55 @@
 package org.apache.rocketmq.tools.command.acl;
 
 import org.apache.commons.cli.*;
+import org.apache.rocketmq.client.exception.MQBrokerException;
+import org.apache.rocketmq.client.exception.MQClientException;
+import org.apache.rocketmq.common.AclConfig;
+import org.apache.rocketmq.common.PlainAccessConfig;
+import org.apache.rocketmq.remoting.exception.RemotingException;
 import org.apache.rocketmq.srvutil.ServerUtil;
+import org.apache.rocketmq.tools.admin.DefaultMQAdminExt;
+import org.apache.rocketmq.tools.command.SubCommandException;
+import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.mockito.Mockito.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.InstanceOfAssertFactories.map;
 
+@RunWith(MockitoJUnitRunner.class)
 public class GetAccessConfigSubCommandTest {
+    @Mock
+    private DefaultMQAdminExt mqAdminExt;
+    @Mock
+    private AclConfig aclConfig;
+
+    @Before
+    public void init() throws MQBrokerException, RemotingException, InterruptedException, MQClientException {
+        List<String> globalWhiteAddrs = new ArrayList<>();
+        List<PlainAccessConfig> configs = new ArrayList<>();
+        when(aclConfig.getPlainAccessConfigs()).thenReturn(configs);
+        when(aclConfig.getGlobalWhiteAddrs()).thenReturn(globalWhiteAddrs);
+        when(mqAdminExt.examineBrokerClusterAclConfig(anyString())).thenReturn(aclConfig);
+    }
 
     @Test
-    public void testExecute() {
+    public void testExecute() throws SubCommandException {
         GetAccessConfigSubCommand cmd = new GetAccessConfigSubCommand();
         Options options = ServerUtil.buildCommandlineOptions(new Options());
-        String[] subargs = new String[] {"-c default-cluster"};
+        String[] subargs = new String[] {"-c default-cluster", "-b 127.0.0.1:10911"};
         final CommandLine commandLine =
                 ServerUtil.parseCmdLine("mqadmin " + cmd.commandName(), subargs, cmd.buildCommandlineOptions(options), new PosixParser());
         assertThat(commandLine.getOptionValue('c').trim()).isEqualTo("default-cluster");
+        assertThat(commandLine.getOptionValue('b').trim()).isEqualTo("127.0.0.1:10911");
+        cmd.execute(commandLine, options, null);
     }
+
+
 }

@@ -125,6 +125,8 @@ public class PullMessageService extends ServiceThread {
 
         while (!this.isStopped()) {
             try {
+                // todo 找不到第一次put的时机了，一直为空会阻塞的？
+                // 而且这个PUllRequest只对一个queue拉取，加入的时机到底在哪里？
                 MessageRequest messageRequest = this.messageRequestQueue.take();
                 if (messageRequest.getMessageRequestMode() == MessageRequestMode.POP) {
                     this.popMessage((PopRequest)messageRequest);

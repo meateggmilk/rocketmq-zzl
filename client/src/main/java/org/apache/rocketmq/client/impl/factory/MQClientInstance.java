@@ -259,10 +259,13 @@ public class MQClientInstance {
                     // Start request-response channel
                     this.mQClientAPIImpl.start();
                     // Start various schedule tasks
+                    //开启一系列定时任务：拉取路由信息，发送心跳，保存消费进度
                     this.startScheduledTask();
                     // Start pull service
+                    //开启消息拉取服务
                     this.pullMessageService.start();
                     // Start rebalance service
+                    //启动重平衡服务
                     this.rebalanceService.start();
                     // Start push service
                     this.defaultMQProducer.getDefaultMQProducerImpl().start(false);
@@ -358,6 +361,7 @@ public class MQClientInstance {
                 if (impl != null) {
                     Set<SubscriptionData> subList = impl.subscriptions();
                     if (subList != null) {
+                        //根据消费这的订阅关系获得topic
                         for (SubscriptionData subData : subList) {
                             topicList.add(subData.getTopic());
                         }
@@ -374,6 +378,7 @@ public class MQClientInstance {
                 MQProducerInner impl = entry.getValue();
                 if (impl != null) {
                     Set<String> lst = impl.getPublishTopicList();
+                    //所有的topic列表
                     topicList.addAll(lst);
                 }
             }
@@ -633,6 +638,7 @@ public class MQClientInstance {
             if (this.lockNamesrv.tryLock(LOCK_TIMEOUT_MILLIS, TimeUnit.MILLISECONDS)) {
                 try {
                     TopicRouteData topicRouteData;
+                    //自动创建逻辑"TBW102"
                     if (isDefault && defaultMQProducer != null) {
                         topicRouteData = this.mQClientAPIImpl.getDefaultTopicRouteInfoFromNameServer(defaultMQProducer.getCreateTopicKey(),
                             clientConfig.getMqClientApiTimeout());
@@ -644,10 +650,12 @@ public class MQClientInstance {
                             }
                         }
                     } else {
+                        //从namesrv中获取topic的路由信息
                         topicRouteData = this.mQClientAPIImpl.getTopicRouteInfoFromNameServer(topic, clientConfig.getMqClientApiTimeout());
                     }
                     if (topicRouteData != null) {
                         TopicRouteData old = this.topicRouteTable.get(topic);
+                        //先排序后对比
                         boolean changed = topicRouteDataIsChange(old, topicRouteData);
                         if (!changed) {
                             changed = this.isNeedUpdateTopicRouteInfo(topic);

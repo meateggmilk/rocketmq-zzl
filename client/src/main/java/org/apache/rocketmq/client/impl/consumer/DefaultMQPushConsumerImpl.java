@@ -237,6 +237,9 @@ public class DefaultMQPushConsumerImpl implements MQConsumerInner {
         this.offsetStore = offsetStore;
     }
 
+    /**
+     * PullRequest包括：group，queue，offset
+     */
     public void pullMessage(final PullRequest pullRequest) {
         final ProcessQueue processQueue = pullRequest.getProcessQueue();
         if (processQueue.isDropped()) {
@@ -386,6 +389,8 @@ public class DefaultMQPushConsumerImpl implements MQConsumerInner {
                             break;
                         case NO_NEW_MSG:
                         case NO_MATCHED_MSG:
+                            //todo 如果没有匹配的消息，会将拉取请求放到queue中，目的就是让客户端重新试一次
+                            // 但是这样会导致没有消息的时候频繁拉取，CPU消耗过大？难道是通过长轮询机制来克服的吗？
                             pullRequest.setNextOffset(pullResult.getNextBeginOffset());
 
                             DefaultMQPushConsumerImpl.this.correctTagsOffset(pullRequest);
@@ -669,6 +674,10 @@ public class DefaultMQPushConsumerImpl implements MQConsumerInner {
         return this.mQClientFactory.getConsumerStatsManager();
     }
 
+    /**
+     * 这个方法在pullMessage中和rebalance中调用了，目的就是产生一个拉取请求
+     * 但是如何防止控制请求来长轮询以节约CPU呢？
+     */
     public void executePullRequestImmediately(final PullRequest pullRequest) {
         this.mQClientFactory.getPullMessageService().executePullRequestImmediately(pullRequest);
     }
@@ -883,15 +892,18 @@ public class DefaultMQPushConsumerImpl implements MQConsumerInner {
                 log.info("the consumer [{}] start beginning. messageModel={}, isUnitMode={}", this.defaultMQPushConsumer.getConsumerGroup(),
                     this.defaultMQPushConsumer.getMessageModel(), this.defaultMQPushConsumer.isUnitMode());
                 this.serviceState = ServiceState.START_FAILED;
-
+                //1、参数校验
                 this.checkConfig();
 
+                //2.构建订阅信息
                 this.copySubscription();
 
+                //3、集群模式下改变instanceName
                 if (this.defaultMQPushConsumer.getMessageModel() == MessageModel.CLUSTERING) {
                     this.defaultMQPushConsumer.changeInstanceNameToPID();
                 }
 
+                //单例工厂
                 this.mQClientFactory = MQClientManager.getInstance().getOrCreateMQClientInstance(this.defaultMQPushConsumer, this.rpcHook);
 
                 this.rebalanceImpl.setConsumerGroup(this.defaultMQPushConsumer.getConsumerGroup());
@@ -911,9 +923,11 @@ public class DefaultMQPushConsumerImpl implements MQConsumerInner {
                 } else {
                     switch (this.defaultMQPushConsumer.getMessageModel()) {
                         case BROADCASTING:
+                            //广播模式下进度保存在本地
                             this.offsetStore = new LocalFileOffsetStore(this.mQClientFactory, this.defaultMQPushConsumer.getConsumerGroup());
                             break;
                         case CLUSTERING:
+                            //集群模式下进度保存在broker中
                             this.offsetStore = new RemoteBrokerOffsetStore(this.mQClientFactory, this.defaultMQPushConsumer.getConsumerGroup());
                             break;
                         default:
@@ -942,6 +956,7 @@ public class DefaultMQPushConsumerImpl implements MQConsumerInner {
                 // POPTODO
                 this.consumeMessagePopService.start();
 
+                //注册到factory缓存中
                 boolean registerOK = mQClientFactory.registerConsumer(this.defaultMQPushConsumer.getConsumerGroup(), this);
                 if (!registerOK) {
                     this.serviceState = ServiceState.CREATE_JUST;
@@ -951,6 +966,7 @@ public class DefaultMQPushConsumerImpl implements MQConsumerInner {
                         null);
                 }
 
+                //启动工厂
                 mQClientFactory.start();
                 log.info("the consumer [{}] start OK.", this.defaultMQPushConsumer.getConsumerGroup());
                 this.serviceState = ServiceState.RUNNING;
@@ -966,9 +982,14 @@ public class DefaultMQPushConsumerImpl implements MQConsumerInner {
                 break;
         }
 
+
+        //获取本地中缓存中的订阅关系，然后更新一次
         this.updateTopicSubscribeInfoWhenSubscriptionChanged();
+        //这个是检查client是不是启用了什么特殊的tag模式，过滤模式之类
         this.mQClientFactory.checkClientInBroker();
+        //发送心跳到所有的broker中
         this.mQClientFactory.sendHeartbeatToAllBrokerWithLock();
+        //立即做一次重平衡
         this.mQClientFactory.rebalanceImmediately();
     }
 

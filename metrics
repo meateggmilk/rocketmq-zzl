@@ -1,0 +1,241 @@
+# TYPE target info
+# HELP target Target metadata
+target_info{} 1
+# TYPE otel_scope_info info
+# HELP otel_scope_info Scope metadata
+otel_scope_info{otel_scope_name="broker-meter"} 1
+# TYPE rocketmq_storage_message_reserve_time gauge
+# HELP rocketmq_storage_message_reserve_time default view for gauge.
+rocketmq_storage_message_reserve_time_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",storage_medium="disk",storage_type="local"} 1.9491132515E10 1696905287361
+# TYPE rocketmq_timer_enqueue_latency gauge
+# HELP rocketmq_timer_enqueue_latency default view for gauge.
+rocketmq_timer_enqueue_latency_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",storage_medium="disk",storage_type="local"} 0.0 1696905287361
+# TYPE rocketmq_timer_enqueue_lag gauge
+# HELP rocketmq_timer_enqueue_lag default view for gauge.
+rocketmq_timer_enqueue_lag{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",storage_medium="disk",storage_type="local"} 0.0 1696905287361
+# TYPE rocketmq_timing_messages gauge
+# HELP rocketmq_timing_messages default view for gauge.
+rocketmq_timing_messages{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",storage_medium="disk",storage_type="local",topic="BenchmarkTest"} 0.0 1696905287361
+# TYPE rocketmq_storage_flush_behind_bytes gauge
+# HELP rocketmq_storage_flush_behind_bytes default view for gauge.
+rocketmq_storage_flush_behind_bytes{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",storage_medium="disk",storage_type="local"} 1230.0 1696905287361
+# TYPE rocketmq_processor_watermark gauge
+# HELP rocketmq_processor_watermark default view for gauge.
+rocketmq_processor_watermark{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",processor="reply"} 0.0 1696905287361
+rocketmq_processor_watermark{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",processor="transaction"} 0.0 1696905287361
+rocketmq_processor_watermark{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",processor="send"} 0.0 1696905287361
+rocketmq_processor_watermark{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",processor="async_put"} 0.0 1696905287361
+rocketmq_processor_watermark{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",processor="lite_pull"} 0.0 1696905287361
+rocketmq_processor_watermark{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",processor="pull"} 0.0 1696905287361
+rocketmq_processor_watermark{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",processor="heartbeat"} 0.0 1696905287361
+rocketmq_processor_watermark{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",processor="consumer_manager"} 0.0 1696905287361
+rocketmq_processor_watermark{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",processor="admin"} 0.0 1696905287361
+rocketmq_processor_watermark{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",processor="client_manager"} 0.0 1696905287361
+rocketmq_processor_watermark{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",processor="query_message"} 0.0 1696905287361
+rocketmq_processor_watermark{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",processor="ack"} 0.0 1696905287361
+# TYPE rocketmq_pop_buffer_scan_time_consume histogram
+# HELP rocketmq_pop_buffer_scan_time_consume Time consuming of pop buffer scan
+rocketmq_pop_buffer_scan_time_consume_milliseconds_count{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker"} 5267005.0 1696905287361
+rocketmq_pop_buffer_scan_time_consume_milliseconds_sum{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker"} 39651.0 1696905287361
+rocketmq_pop_buffer_scan_time_consume_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",le="1.0"} 5266935.0 1696905287361
+rocketmq_pop_buffer_scan_time_consume_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",le="10.0"} 5266998.0 1696905287361
+rocketmq_pop_buffer_scan_time_consume_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",le="100.0"} 5267001.0 1696905287361
+rocketmq_pop_buffer_scan_time_consume_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",le="1000.0"} 5267005.0 1696905287361
+rocketmq_pop_buffer_scan_time_consume_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",le="2000.0"} 5267005.0 1696905287361
+rocketmq_pop_buffer_scan_time_consume_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",le="3000.0"} 5267005.0 1696905287361
+rocketmq_pop_buffer_scan_time_consume_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",le="+Inf"} 5267005.0 1696905287361
+# TYPE rocketmq_pop_revive_lag gauge
+# HELP rocketmq_pop_revive_lag default view for gauge.
+rocketmq_pop_revive_lag_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="1"} 1.0 1696905287361
+rocketmq_pop_revive_lag_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="2"} 1.0 1696905287361
+rocketmq_pop_revive_lag_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="3"} 1.0 1696905287361
+rocketmq_pop_revive_lag_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="4"} 1.0 1696905287361
+rocketmq_pop_revive_lag_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="5"} 1.0 1696905287361
+rocketmq_pop_revive_lag_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="6"} 1.0 1696905287361
+rocketmq_pop_revive_lag_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="7"} 1.0 1696905287361
+rocketmq_pop_revive_lag_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="0"} 1.0 1696905287361
+# TYPE rocketmq_pop_revive_latency gauge
+# HELP rocketmq_pop_revive_latency default view for gauge.
+rocketmq_pop_revive_latency_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="1"} 0.0 1696905287361
+rocketmq_pop_revive_latency_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="2"} 0.0 1696905287361
+rocketmq_pop_revive_latency_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="3"} 0.0 1696905287361
+rocketmq_pop_revive_latency_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="4"} 0.0 1696905287361
+rocketmq_pop_revive_latency_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="5"} 0.0 1696905287361
+rocketmq_pop_revive_latency_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="6"} 0.0 1696905287361
+rocketmq_pop_revive_latency_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="7"} 0.0 1696905287361
+rocketmq_pop_revive_latency_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",queue_id="0"} 0.0 1696905287361
+# TYPE rocketmq_storage_size gauge
+# HELP rocketmq_storage_size default view for gauge.
+rocketmq_storage_size_bytes{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",storage_medium="disk",storage_type="local"} 1.5905103872E10 1696905287361
+# TYPE rocketmq_pop_offset_buffer_size gauge
+# HELP rocketmq_pop_offset_buffer_size default view for gauge.
+rocketmq_pop_offset_buffer_size{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker"} 0.0 1696905287361
+# TYPE rocketmq_timer_dequeue_latency gauge
+# HELP rocketmq_timer_dequeue_latency default view for gauge.
+rocketmq_timer_dequeue_latency_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",storage_medium="disk",storage_type="local"} 0.0 1696905287361
+# TYPE rocketmq_broker_permission gauge
+# HELP rocketmq_broker_permission default view for gauge.
+rocketmq_broker_permission{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker"} 6.0 1696905287361
+# TYPE rocketmq_consumer_lag_messages gauge
+# HELP rocketmq_consumer_lag_messages default view for gauge.
+rocketmq_consumer_lag_messages{otel_scope_name="broker-meter",cluster="DefaultCluster",consumer_group="MQ_INST_test%GID_222",is_retry="false",is_system="false",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl"} 0.0 1696905287361
+# TYPE rocketmq_throughput_out_total counter
+# HELP rocketmq_throughput_out_total default view for counter.
+rocketmq_throughput_out_total{otel_scope_name="broker-meter",cluster="DefaultCluster",consumer_group="MQ_INST_test%GID_222",is_system="false",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl"} 1230.0 1696905287361
+# TYPE rocketmq_timer_dequeue_lag gauge
+# HELP rocketmq_timer_dequeue_lag default view for gauge.
+rocketmq_timer_dequeue_lag{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",storage_medium="disk",storage_type="local"} 0.0 1696905287361
+# TYPE rocketmq_messages_out_total counter
+# HELP rocketmq_messages_out_total default view for counter.
+rocketmq_messages_out_total{otel_scope_name="broker-meter",cluster="DefaultCluster",consumer_group="MQ_INST_test%GID_222",is_system="false",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl"} 5.0 1696905287361
+# TYPE rocketmq_messages_in_total counter
+# HELP rocketmq_messages_in_total default view for counter.
+rocketmq_messages_in_total{otel_scope_name="broker-meter",cluster="DefaultCluster",is_system="false",message_type="normal",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl"} 5.0 1696905287361
+# TYPE rocketmq_consumer_queueing_latency gauge
+# HELP rocketmq_consumer_queueing_latency default view for gauge.
+rocketmq_consumer_queueing_latency_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",consumer_group="MQ_INST_test%GID_222",is_retry="false",is_system="false",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl"} 0.0 1696905287361
+# TYPE rocketmq_consumer_connections gauge
+# HELP rocketmq_consumer_connections default view for gauge.
+rocketmq_consumer_connections{otel_scope_name="broker-meter",cluster="DefaultCluster",consume_mode="push",consumer_group="MQ_INST_test%GID_222",is_system="false",language="java",node_id="broker-a",node_type="broker",protocol_type="remoting",version="v4_8_0"} 1.0 1696905287361
+# TYPE rocketmq_rpc_latency histogram
+# HELP rocketmq_rpc_latency Rpc latency
+rocketmq_rpc_latency_milliseconds_count{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="heart_beat",response_code="success",result="success"} 24.0 1696905287361
+rocketmq_rpc_latency_milliseconds_sum{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="heart_beat",response_code="success",result="success"} 128.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="heart_beat",response_code="success",result="success",le="1.0"} 17.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="heart_beat",response_code="success",result="success",le="3.0"} 18.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="heart_beat",response_code="success",result="success",le="5.0"} 19.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="heart_beat",response_code="success",result="success",le="7.0"} 19.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="heart_beat",response_code="success",result="success",le="10.0"} 20.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="heart_beat",response_code="success",result="success",le="100.0"} 24.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="heart_beat",response_code="success",result="success",le="1000.0"} 24.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="heart_beat",response_code="success",result="success",le="2000.0"} 24.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="heart_beat",response_code="success",result="success",le="3000.0"} 24.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="heart_beat",response_code="success",result="success",le="+Inf"} 24.0 1696905287361
+rocketmq_rpc_latency_milliseconds_count{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="query_consumer_offset",response_code="success",result="success"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_sum{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="query_consumer_offset",response_code="success",result="success"} 8.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="query_consumer_offset",response_code="success",result="success",le="1.0"} 3.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="query_consumer_offset",response_code="success",result="success",le="3.0"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="query_consumer_offset",response_code="success",result="success",le="5.0"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="query_consumer_offset",response_code="success",result="success",le="7.0"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="query_consumer_offset",response_code="success",result="success",le="10.0"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="query_consumer_offset",response_code="success",result="success",le="100.0"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="query_consumer_offset",response_code="success",result="success",le="1000.0"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="query_consumer_offset",response_code="success",result="success",le="2000.0"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="query_consumer_offset",response_code="success",result="success",le="3000.0"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="query_consumer_offset",response_code="success",result="success",le="+Inf"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_count{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="subscription_not_latest",result="success"} 1.0 1696905287361
+rocketmq_rpc_latency_milliseconds_sum{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="subscription_not_latest",result="success"} 54.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="subscription_not_latest",result="success",le="1.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="subscription_not_latest",result="success",le="3.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="subscription_not_latest",result="success",le="5.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="subscription_not_latest",result="success",le="7.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="subscription_not_latest",result="success",le="10.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="subscription_not_latest",result="success",le="100.0"} 1.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="subscription_not_latest",result="success",le="1000.0"} 1.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="subscription_not_latest",result="success",le="2000.0"} 1.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="subscription_not_latest",result="success",le="3000.0"} 1.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="subscription_not_latest",result="success",le="+Inf"} 1.0 1696905287361
+rocketmq_rpc_latency_milliseconds_count{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="get_consumer_list_by_group",response_code="success",result="success"} 60.0 1696905287361
+rocketmq_rpc_latency_milliseconds_sum{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="get_consumer_list_by_group",response_code="success",result="success"} 108.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="get_consumer_list_by_group",response_code="success",result="success",le="1.0"} 54.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="get_consumer_list_by_group",response_code="success",result="success",le="3.0"} 54.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="get_consumer_list_by_group",response_code="success",result="success",le="5.0"} 54.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="get_consumer_list_by_group",response_code="success",result="success",le="7.0"} 54.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="get_consumer_list_by_group",response_code="success",result="success",le="10.0"} 55.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="get_consumer_list_by_group",response_code="success",result="success",le="100.0"} 60.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="get_consumer_list_by_group",response_code="success",result="success",le="1000.0"} 60.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="get_consumer_list_by_group",response_code="success",result="success",le="2000.0"} 60.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="get_consumer_list_by_group",response_code="success",result="success",le="3000.0"} 60.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="get_consumer_list_by_group",response_code="success",result="success",le="+Inf"} 60.0 1696905287361
+rocketmq_rpc_latency_milliseconds_count{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="success",result="success"} 4.0 1696905287361
+rocketmq_rpc_latency_milliseconds_sum{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="success",result="success"} 210.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="success",result="success",le="1.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="success",result="success",le="3.0"} 1.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="success",result="success",le="5.0"} 1.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="success",result="success",le="7.0"} 1.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="success",result="success",le="10.0"} 1.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="success",result="success",le="100.0"} 4.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="success",result="success",le="1000.0"} 4.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="success",result="success",le="2000.0"} 4.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="success",result="success",le="3000.0"} 4.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="success",result="success",le="+Inf"} 4.0 1696905287361
+rocketmq_rpc_latency_milliseconds_count{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="true",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="pull_not_found",result="success"} 155.0 1696905287361
+rocketmq_rpc_latency_milliseconds_sum{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="true",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="pull_not_found",result="success"} 2811756.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="true",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="pull_not_found",result="success",le="1.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="true",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="pull_not_found",result="success",le="3.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="true",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="pull_not_found",result="success",le="5.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="true",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="pull_not_found",result="success",le="7.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="true",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="pull_not_found",result="success",le="10.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="true",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="pull_not_found",result="success",le="100.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="true",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="pull_not_found",result="success",le="1000.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="true",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="pull_not_found",result="success",le="2000.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="true",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="pull_not_found",result="success",le="3000.0"} 0.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="true",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="pull_message",response_code="pull_not_found",result="success",le="+Inf"} 155.0 1696905287361
+rocketmq_rpc_latency_milliseconds_count{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="send_message_v2",response_code="success",result="success"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_sum{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="send_message_v2",response_code="success",result="success"} 225.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="send_message_v2",response_code="success",result="success",le="1.0"} 1.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="send_message_v2",response_code="success",result="success",le="3.0"} 2.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="send_message_v2",response_code="success",result="success",le="5.0"} 2.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="send_message_v2",response_code="success",result="success",le="7.0"} 2.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="send_message_v2",response_code="success",result="success",le="10.0"} 4.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="send_message_v2",response_code="success",result="success",le="100.0"} 4.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="send_message_v2",response_code="success",result="success",le="1000.0"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="send_message_v2",response_code="success",result="success",le="2000.0"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="send_message_v2",response_code="success",result="success",le="3000.0"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="send_message_v2",response_code="success",result="success",le="+Inf"} 5.0 1696905287361
+rocketmq_rpc_latency_milliseconds_count{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="update_consumer_offset",response_code="success",result="oneway"} 565.0 1696905287361
+rocketmq_rpc_latency_milliseconds_sum{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="update_consumer_offset",response_code="success",result="oneway"} 84.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="update_consumer_offset",response_code="success",result="oneway",le="1.0"} 551.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="update_consumer_offset",response_code="success",result="oneway",le="3.0"} 557.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="update_consumer_offset",response_code="success",result="oneway",le="5.0"} 558.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="update_consumer_offset",response_code="success",result="oneway",le="7.0"} 560.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="update_consumer_offset",response_code="success",result="oneway",le="10.0"} 565.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="update_consumer_offset",response_code="success",result="oneway",le="100.0"} 565.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="update_consumer_offset",response_code="success",result="oneway",le="1000.0"} 565.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="update_consumer_offset",response_code="success",result="oneway",le="2000.0"} 565.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="update_consumer_offset",response_code="success",result="oneway",le="3000.0"} 565.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="update_consumer_offset",response_code="success",result="oneway",le="+Inf"} 565.0 1696905287361
+rocketmq_rpc_latency_milliseconds_count{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="unregister_client",response_code="success",result="success"} 2.0 1696905287361
+rocketmq_rpc_latency_milliseconds_sum{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="unregister_client",response_code="success",result="success"} 6.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="unregister_client",response_code="success",result="success",le="1.0"} 1.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="unregister_client",response_code="success",result="success",le="3.0"} 1.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="unregister_client",response_code="success",result="success",le="5.0"} 2.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="unregister_client",response_code="success",result="success",le="7.0"} 2.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="unregister_client",response_code="success",result="success",le="10.0"} 2.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="unregister_client",response_code="success",result="success",le="100.0"} 2.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="unregister_client",response_code="success",result="success",le="1000.0"} 2.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="unregister_client",response_code="success",result="success",le="2000.0"} 2.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="unregister_client",response_code="success",result="success",le="3000.0"} 2.0 1696905287361
+rocketmq_rpc_latency_milliseconds_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_long_polling="false",node_id="broker-a",node_type="broker",protocol_type="remoting",request_code="unregister_client",response_code="success",result="success",le="+Inf"} 2.0 1696905287361
+# TYPE rocketmq_storage_dispatch_behind_bytes gauge
+# HELP rocketmq_storage_dispatch_behind_bytes default view for gauge.
+rocketmq_storage_dispatch_behind_bytes{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker",storage_medium="disk",storage_type="local"} 0.0 1696905287361
+# TYPE rocketmq_consumer_ready_messages gauge
+# HELP rocketmq_consumer_ready_messages default view for gauge.
+rocketmq_consumer_ready_messages{otel_scope_name="broker-meter",cluster="DefaultCluster",consumer_group="MQ_INST_test%GID_222",is_retry="false",is_system="false",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl"} 0.0 1696905287361
+# TYPE rocketmq_consumer_lag_latency gauge
+# HELP rocketmq_consumer_lag_latency default view for gauge.
+rocketmq_consumer_lag_latency_milliseconds{otel_scope_name="broker-meter",cluster="DefaultCluster",consumer_group="MQ_INST_test%GID_222",is_retry="false",is_system="false",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl"} 0.0 1696905287361
+# TYPE rocketmq_throughput_in_total counter
+# HELP rocketmq_throughput_in_total default view for counter.
+rocketmq_throughput_in_total{otel_scope_name="broker-meter",cluster="DefaultCluster",is_system="false",message_type="normal",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl"} 1230.0 1696905287361
+# TYPE rocketmq_pop_checkpoint_buffer_size gauge
+# HELP rocketmq_pop_checkpoint_buffer_size default view for gauge.
+rocketmq_pop_checkpoint_buffer_size{otel_scope_name="broker-meter",cluster="DefaultCluster",node_id="broker-a",node_type="broker"} 0.0 1696905287361
+# TYPE rocketmq_message_size histogram
+# HELP rocketmq_message_size Incoming messages size
+rocketmq_message_size_count{otel_scope_name="broker-meter",cluster="DefaultCluster",is_system="false",message_type="normal",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl"} 5.0 1696905287361
+rocketmq_message_size_sum{otel_scope_name="broker-meter",cluster="DefaultCluster",is_system="false",message_type="normal",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl"} 1230.0 1696905287361
+rocketmq_message_size_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_system="false",message_type="normal",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl",le="1024.0"} 5.0 1696905287361
+rocketmq_message_size_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_system="false",message_type="normal",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl",le="4096.0"} 5.0 1696905287361
+rocketmq_message_size_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_system="false",message_type="normal",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl",le="524288.0"} 5.0 1696905287361
+rocketmq_message_size_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_system="false",message_type="normal",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl",le="1048576.0"} 5.0 1696905287361
+rocketmq_message_size_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_system="false",message_type="normal",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl",le="2097152.0"} 5.0 1696905287361
+rocketmq_message_size_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_system="false",message_type="normal",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl",le="4194304.0"} 5.0 1696905287361
+rocketmq_message_size_bucket{otel_scope_name="broker-meter",cluster="DefaultCluster",is_system="false",message_type="normal",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl",le="+Inf"} 5.0 1696905287361
+# TYPE rocketmq_consumer_inflight_messages gauge
+# HELP rocketmq_consumer_inflight_messages default view for gauge.
+rocketmq_consumer_inflight_messages{otel_scope_name="broker-meter",cluster="DefaultCluster",consumer_group="MQ_INST_test%GID_222",is_retry="false",is_system="false",node_id="broker-a",node_type="broker",topic="MQ_INST_test%zzl"} 0.0 1696905287361
+# TYPE rocketmq_producer_connections gauge
+# HELP rocketmq_producer_connections default view for gauge.
+rocketmq_producer_connections{otel_scope_name="broker-meter",cluster="DefaultCluster",language="java",node_id="broker-a",node_type="broker",protocol_type="remoting",version="v4_8_0"} 1.0 1696905287361
